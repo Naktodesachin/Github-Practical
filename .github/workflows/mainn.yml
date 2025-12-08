@@ -1,0 +1,17 @@
+name: Basic Workflow
+on:
+  push:
+    branches: [ "main"]
+    
+jobs:
+  build-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: print greetings
+        run:  echo " hello how are you."
+  
+    
+    
+    
