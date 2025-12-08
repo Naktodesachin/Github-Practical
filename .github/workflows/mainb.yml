@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       -name: checkout code
+       - name: checkout code
         uses: actions/checkout@v4
-       -name: greetings message
+       - name: greetings message
         run: echo " hello how are you"
     
