@@ -9,5 +9,5 @@ jobs:
        -name: checkout code
         uses: actions/checkout@v4
        -name: greetings message
-        uses: echo " hello how are you"
+        run: echo " hello how are you"
     
