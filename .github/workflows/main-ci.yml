@@ -1,0 +1,11 @@
+name: Main CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/reusable-ci.yml
+    with:
+      environment: "dev"
