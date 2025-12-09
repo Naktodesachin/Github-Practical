@@ -1,0 +1,26 @@
+name: Reusable CI
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Step
+        run: echo "Building for ${{ inputs.environment }} environment..."
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Running Tests
+        run: echo "Running tests..."
